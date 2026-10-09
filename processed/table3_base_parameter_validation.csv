@@ -1,0 +1,8 @@
+validation_group,config_id,alpha,beta,mu_min,mu_max,detection_delay_s,false_positive_count,benign_observation_count,false_positive_rate,historical_response_delay_s,historical_recovery_time_s,not_reached_flags
+ALPHA_BETA,AB-1,0.6,0.4,0.2,0.8,,0,16,0.0,,0.0,"[""DETECTION_NOT_REACHED"",""HISTORICAL_RESPONSE_NOT_REACHED""]"
+ALPHA_BETA,AB-2,0.7,0.3,0.2,0.8,0.0,0,16,0.0,1.0,0.0,[]
+ALPHA_BETA,AB-3,0.8,0.2,0.2,0.8,0.0,0,16,0.0,1.0,1.0,[]
+MU_MIN,MIN-1,0.7,0.3,0.1,0.8,0.0,0,16,0.0,1.0,0.0,[]
+MU_MIN,MIN-3,0.7,0.3,0.3,0.8,0.0,0,16,0.0,2.0,0.0,[]
+MU_MAX,MAX-1,0.7,0.3,0.2,0.7,0.0,0,16,0.0,1.0,0.0,[]
+MU_MAX,MAX-3,0.7,0.3,0.2,0.9,0.0,0,16,0.0,1.0,1.0,[]

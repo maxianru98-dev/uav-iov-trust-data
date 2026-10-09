@@ -1,0 +1,3337 @@
+{
+  "schema_version": 1,
+  "experiment_id": "E5-CORROBORATION-GCS-GATE",
+  "benchmark_name": "Multi-vehicle corroboration and GCS verification gate",
+  "case_order": [
+    "E5_VERIFIED",
+    "E5_REJECTED"
+  ],
+  "method_order": [
+    "Proposed Two-Gate Authorization",
+    "Corroboration-Only Authorization (No GCS Gate)"
+  ],
+  "experiment_scope": {
+    "network_context_vehicle_count": 200,
+    "network_context_uav_count": 2,
+    "target_uav_id": "uA",
+    "logical_reporting_vehicle_ids": [
+      "v1",
+      "v2",
+      "v3"
+    ],
+    "interpretation": "FOCAL_CORROBORATION_GATE_ISOLATION",
+    "three_reporting_vehicles_are_network_aggregate": false
+  },
+  "report_schedule": [
+    {
+      "event_id": "R1",
+      "timestamp_s": 10.0,
+      "vehicle_id": "v1",
+      "target_uav_id": "uA",
+      "admissible": true
+    },
+    {
+      "event_id": "R2",
+      "timestamp_s": 11.0,
+      "vehicle_id": "v1",
+      "target_uav_id": "uA",
+      "admissible": true
+    },
+    {
+      "event_id": "R3",
+      "timestamp_s": 12.0,
+      "vehicle_id": "v1",
+      "target_uav_id": "uA",
+      "admissible": true
+    },
+    {
+      "event_id": "R4",
+      "timestamp_s": 13.0,
+      "vehicle_id": "v2",
+      "target_uav_id": "uA",
+      "admissible": true
+    },
+    {
+      "event_id": "R5",
+      "timestamp_s": 14.0,
+      "vehicle_id": "v3",
+      "target_uav_id": "uA",
+      "admissible": true
+    }
+  ],
+  "execution_contract": {
+    "type": "DETERMINISTIC_CONTROLLED_CORROBORATION_GATE_EXPERIMENT",
+    "deterministic": true,
+    "rng": false,
+    "seed": false,
+    "replicate": false,
+    "monte_carlo": false,
+    "sample_sd": false,
+    "confidence_interval": false,
+    "student_t": false,
+    "observation_interval_s": 1.0,
+    "evaluations_per_case": 60,
+    "formal_evaluation_rows": 120,
+    "formal_result_core_calls": 120,
+    "threshold_probe_core_calls": 120,
+    "total_actual_core_invocations": 240,
+    "evaluation_mode": "OPEN_LOOP_CORROBORATION_GATE_DIAGNOSTIC_EVALUATION",
+    "authorization_signal": "NETWORK_ACTION_AUTHORIZATION_SIGNAL",
+    "authorization_persisted": false,
+    "enforcement_executed": false,
+    "upstream_input": "UPSTREAM_ADMISSIBLE_V2U_REPORT_EVENTS",
+    "reruns_e4": false
+  },
+  "output_policy": {
+    "clipping": false,
+    "normalization": false,
+    "rescaling": false,
+    "ranking": false,
+    "winner_selection": false,
+    "composite_score": false,
+    "statistical_significance": false,
+    "universal_earlier_is_better": false
+  },
+  "records": [
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 0.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": -5.0,
+      "window_end_inclusive": 0.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 1.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": -4.0,
+      "window_end_inclusive": 1.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 2.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": -3.0,
+      "window_end_inclusive": 2.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 3.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": -2.0,
+      "window_end_inclusive": 3.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 4.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": -1.0,
+      "window_end_inclusive": 4.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 5.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 0.0,
+      "window_end_inclusive": 5.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 6.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 1.0,
+      "window_end_inclusive": 6.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 7.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 2.0,
+      "window_end_inclusive": 7.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 8.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 3.0,
+      "window_end_inclusive": 8.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 9.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 4.0,
+      "window_end_inclusive": 9.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 10.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 5.0,
+      "window_end_inclusive": 10.0,
+      "eligible_event_ids": [
+        "R1"
+      ],
+      "window_report_event_count": 1,
+      "distinct_vehicle_ids": [
+        "v1"
+      ],
+      "distinct_vehicle_count": 1,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 11.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 6.0,
+      "window_end_inclusive": 11.0,
+      "eligible_event_ids": [
+        "R1",
+        "R2"
+      ],
+      "window_report_event_count": 2,
+      "distinct_vehicle_ids": [
+        "v1"
+      ],
+      "distinct_vehicle_count": 1,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 12.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 7.0,
+      "window_end_inclusive": 12.0,
+      "eligible_event_ids": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "window_report_event_count": 3,
+      "distinct_vehicle_ids": [
+        "v1"
+      ],
+      "distinct_vehicle_count": 1,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 13.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 8.0,
+      "window_end_inclusive": 13.0,
+      "eligible_event_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "window_report_event_count": 4,
+      "distinct_vehicle_ids": [
+        "v1",
+        "v2"
+      ],
+      "distinct_vehicle_count": 2,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 14.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 9.0,
+      "window_end_inclusive": 14.0,
+      "eligible_event_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5"
+      ],
+      "window_report_event_count": 5,
+      "distinct_vehicle_ids": [
+        "v1",
+        "v2",
+        "v3"
+      ],
+      "distinct_vehicle_count": 3,
+      "k_cor": 3,
+      "threshold_met": true,
+      "verification_status": "VERIFIED",
+      "core_gcs_verified": true,
+      "frozen_escalation_enabled": true,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": true
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": true
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 15.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 10.0,
+      "window_end_inclusive": 15.0,
+      "eligible_event_ids": [
+        "R2",
+        "R3",
+        "R4",
+        "R5"
+      ],
+      "window_report_event_count": 4,
+      "distinct_vehicle_ids": [
+        "v1",
+        "v2",
+        "v3"
+      ],
+      "distinct_vehicle_count": 3,
+      "k_cor": 3,
+      "threshold_met": true,
+      "verification_status": "VERIFIED",
+      "core_gcs_verified": true,
+      "frozen_escalation_enabled": true,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": true
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": true
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 16.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 11.0,
+      "window_end_inclusive": 16.0,
+      "eligible_event_ids": [
+        "R3",
+        "R4",
+        "R5"
+      ],
+      "window_report_event_count": 3,
+      "distinct_vehicle_ids": [
+        "v1",
+        "v2",
+        "v3"
+      ],
+      "distinct_vehicle_count": 3,
+      "k_cor": 3,
+      "threshold_met": true,
+      "verification_status": "VERIFIED",
+      "core_gcs_verified": true,
+      "frozen_escalation_enabled": true,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": true
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": true
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 17.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 12.0,
+      "window_end_inclusive": 17.0,
+      "eligible_event_ids": [
+        "R4",
+        "R5"
+      ],
+      "window_report_event_count": 2,
+      "distinct_vehicle_ids": [
+        "v2",
+        "v3"
+      ],
+      "distinct_vehicle_count": 2,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 18.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 13.0,
+      "window_end_inclusive": 18.0,
+      "eligible_event_ids": [
+        "R5"
+      ],
+      "window_report_event_count": 1,
+      "distinct_vehicle_ids": [
+        "v3"
+      ],
+      "distinct_vehicle_count": 1,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 19.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 14.0,
+      "window_end_inclusive": 19.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 20.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 15.0,
+      "window_end_inclusive": 20.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 21.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 16.0,
+      "window_end_inclusive": 21.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 22.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 17.0,
+      "window_end_inclusive": 22.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 23.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 18.0,
+      "window_end_inclusive": 23.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 24.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 19.0,
+      "window_end_inclusive": 24.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 25.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 20.0,
+      "window_end_inclusive": 25.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 26.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 21.0,
+      "window_end_inclusive": 26.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 27.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 22.0,
+      "window_end_inclusive": 27.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 28.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 23.0,
+      "window_end_inclusive": 28.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 29.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 24.0,
+      "window_end_inclusive": 29.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 30.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 25.0,
+      "window_end_inclusive": 30.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 31.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 26.0,
+      "window_end_inclusive": 31.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 32.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 27.0,
+      "window_end_inclusive": 32.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 33.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 28.0,
+      "window_end_inclusive": 33.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 34.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 29.0,
+      "window_end_inclusive": 34.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 35.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 30.0,
+      "window_end_inclusive": 35.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 36.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 31.0,
+      "window_end_inclusive": 36.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 37.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 32.0,
+      "window_end_inclusive": 37.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 38.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 33.0,
+      "window_end_inclusive": 38.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 39.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 34.0,
+      "window_end_inclusive": 39.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 40.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 35.0,
+      "window_end_inclusive": 40.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 41.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 36.0,
+      "window_end_inclusive": 41.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 42.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 37.0,
+      "window_end_inclusive": 42.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 43.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 38.0,
+      "window_end_inclusive": 43.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 44.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 39.0,
+      "window_end_inclusive": 44.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 45.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 40.0,
+      "window_end_inclusive": 45.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 46.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 41.0,
+      "window_end_inclusive": 46.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 47.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 42.0,
+      "window_end_inclusive": 47.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 48.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 43.0,
+      "window_end_inclusive": 48.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 49.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 44.0,
+      "window_end_inclusive": 49.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 50.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 45.0,
+      "window_end_inclusive": 50.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 51.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 46.0,
+      "window_end_inclusive": 51.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 52.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 47.0,
+      "window_end_inclusive": 52.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 53.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 48.0,
+      "window_end_inclusive": 53.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 54.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 49.0,
+      "window_end_inclusive": 54.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 55.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 50.0,
+      "window_end_inclusive": 55.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 56.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 51.0,
+      "window_end_inclusive": 56.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 57.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 52.0,
+      "window_end_inclusive": 57.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 58.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 53.0,
+      "window_end_inclusive": 58.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_VERIFIED",
+      "time_s": 59.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 54.0,
+      "window_end_inclusive": 59.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 0.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": -5.0,
+      "window_end_inclusive": 0.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 1.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": -4.0,
+      "window_end_inclusive": 1.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 2.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": -3.0,
+      "window_end_inclusive": 2.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 3.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": -2.0,
+      "window_end_inclusive": 3.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 4.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": -1.0,
+      "window_end_inclusive": 4.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 5.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 0.0,
+      "window_end_inclusive": 5.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 6.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 1.0,
+      "window_end_inclusive": 6.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 7.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 2.0,
+      "window_end_inclusive": 7.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 8.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 3.0,
+      "window_end_inclusive": 8.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 9.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 4.0,
+      "window_end_inclusive": 9.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 10.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 5.0,
+      "window_end_inclusive": 10.0,
+      "eligible_event_ids": [
+        "R1"
+      ],
+      "window_report_event_count": 1,
+      "distinct_vehicle_ids": [
+        "v1"
+      ],
+      "distinct_vehicle_count": 1,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 11.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 6.0,
+      "window_end_inclusive": 11.0,
+      "eligible_event_ids": [
+        "R1",
+        "R2"
+      ],
+      "window_report_event_count": 2,
+      "distinct_vehicle_ids": [
+        "v1"
+      ],
+      "distinct_vehicle_count": 1,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 12.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 7.0,
+      "window_end_inclusive": 12.0,
+      "eligible_event_ids": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "window_report_event_count": 3,
+      "distinct_vehicle_ids": [
+        "v1"
+      ],
+      "distinct_vehicle_count": 1,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 13.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 8.0,
+      "window_end_inclusive": 13.0,
+      "eligible_event_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "window_report_event_count": 4,
+      "distinct_vehicle_ids": [
+        "v1",
+        "v2"
+      ],
+      "distinct_vehicle_count": 2,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 14.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 9.0,
+      "window_end_inclusive": 14.0,
+      "eligible_event_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5"
+      ],
+      "window_report_event_count": 5,
+      "distinct_vehicle_ids": [
+        "v1",
+        "v2",
+        "v3"
+      ],
+      "distinct_vehicle_count": 3,
+      "k_cor": 3,
+      "threshold_met": true,
+      "verification_status": "REJECTED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": true
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 15.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 10.0,
+      "window_end_inclusive": 15.0,
+      "eligible_event_ids": [
+        "R2",
+        "R3",
+        "R4",
+        "R5"
+      ],
+      "window_report_event_count": 4,
+      "distinct_vehicle_ids": [
+        "v1",
+        "v2",
+        "v3"
+      ],
+      "distinct_vehicle_count": 3,
+      "k_cor": 3,
+      "threshold_met": true,
+      "verification_status": "REJECTED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": true
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 16.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 11.0,
+      "window_end_inclusive": 16.0,
+      "eligible_event_ids": [
+        "R3",
+        "R4",
+        "R5"
+      ],
+      "window_report_event_count": 3,
+      "distinct_vehicle_ids": [
+        "v1",
+        "v2",
+        "v3"
+      ],
+      "distinct_vehicle_count": 3,
+      "k_cor": 3,
+      "threshold_met": true,
+      "verification_status": "REJECTED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": true
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 17.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 12.0,
+      "window_end_inclusive": 17.0,
+      "eligible_event_ids": [
+        "R4",
+        "R5"
+      ],
+      "window_report_event_count": 2,
+      "distinct_vehicle_ids": [
+        "v2",
+        "v3"
+      ],
+      "distinct_vehicle_count": 2,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 18.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 13.0,
+      "window_end_inclusive": 18.0,
+      "eligible_event_ids": [
+        "R5"
+      ],
+      "window_report_event_count": 1,
+      "distinct_vehicle_ids": [
+        "v3"
+      ],
+      "distinct_vehicle_count": 1,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 19.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 14.0,
+      "window_end_inclusive": 19.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 20.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 15.0,
+      "window_end_inclusive": 20.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 21.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 16.0,
+      "window_end_inclusive": 21.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 22.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 17.0,
+      "window_end_inclusive": 22.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 23.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 18.0,
+      "window_end_inclusive": 23.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 24.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 19.0,
+      "window_end_inclusive": 24.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 25.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 20.0,
+      "window_end_inclusive": 25.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 26.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 21.0,
+      "window_end_inclusive": 26.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 27.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 22.0,
+      "window_end_inclusive": 27.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 28.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 23.0,
+      "window_end_inclusive": 28.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 29.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 24.0,
+      "window_end_inclusive": 29.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 30.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 25.0,
+      "window_end_inclusive": 30.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 31.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 26.0,
+      "window_end_inclusive": 31.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 32.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 27.0,
+      "window_end_inclusive": 32.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 33.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 28.0,
+      "window_end_inclusive": 33.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 34.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 29.0,
+      "window_end_inclusive": 34.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 35.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 30.0,
+      "window_end_inclusive": 35.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 36.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 31.0,
+      "window_end_inclusive": 36.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 37.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 32.0,
+      "window_end_inclusive": 37.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 38.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 33.0,
+      "window_end_inclusive": 38.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 39.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 34.0,
+      "window_end_inclusive": 39.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 40.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 35.0,
+      "window_end_inclusive": 40.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 41.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 36.0,
+      "window_end_inclusive": 41.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 42.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 37.0,
+      "window_end_inclusive": 42.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 43.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 38.0,
+      "window_end_inclusive": 43.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 44.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 39.0,
+      "window_end_inclusive": 44.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 45.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 40.0,
+      "window_end_inclusive": 45.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 46.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 41.0,
+      "window_end_inclusive": 46.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 47.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 42.0,
+      "window_end_inclusive": 47.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 48.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 43.0,
+      "window_end_inclusive": 48.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 49.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 44.0,
+      "window_end_inclusive": 49.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 50.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 45.0,
+      "window_end_inclusive": 50.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 51.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 46.0,
+      "window_end_inclusive": 51.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 52.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 47.0,
+      "window_end_inclusive": 52.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 53.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 48.0,
+      "window_end_inclusive": 53.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 54.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 49.0,
+      "window_end_inclusive": 54.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 55.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 50.0,
+      "window_end_inclusive": 55.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 56.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 51.0,
+      "window_end_inclusive": 56.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 57.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 52.0,
+      "window_end_inclusive": 57.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 58.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 53.0,
+      "window_end_inclusive": 58.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    },
+    {
+      "case_id": "E5_REJECTED",
+      "time_s": 59.0,
+      "target_uav_id": "uA",
+      "window_start_exclusive": 54.0,
+      "window_end_inclusive": 59.0,
+      "eligible_event_ids": [],
+      "window_report_event_count": 0,
+      "distinct_vehicle_ids": [],
+      "distinct_vehicle_count": 0,
+      "k_cor": 3,
+      "threshold_met": false,
+      "verification_status": "NOT_EVALUATED",
+      "core_gcs_verified": false,
+      "frozen_escalation_enabled": false,
+      "variant_results": [
+        {
+          "method": "Proposed Two-Gate Authorization",
+          "effective_authorization": false
+        },
+        {
+          "method": "Corroboration-Only Authorization (No GCS Gate)",
+          "effective_authorization": false
+        }
+      ]
+    }
+  ]
+}

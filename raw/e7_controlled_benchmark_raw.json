@@ -1,0 +1,1272 @@
+{
+  "schema_version": "E7-U2-CONTROLLED-RECORDS-v1",
+  "benchmark_name": "UNIFIED_CONTROLLED_OVERHEAD_COMPARISON",
+  "paper_facing_role": "PAPER_FACING_PRIMARY_E7_COMPARISON",
+  "execution_id": "E7-U2-CONTROLLED-RUN-1",
+  "method_order": [
+    "Proposed",
+    "SELAP2026",
+    "SCZ-HA2026",
+    "BAZAM2025",
+    "BCADS2026"
+  ],
+  "environment": {
+    "python_implementation": "CPython",
+    "python_version": "3.12.10",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "system": "Windows",
+    "release": "11",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 141 Stepping 1, GenuineIntel",
+    "logical_cpu_count": 16,
+    "timer": "time.perf_counter_ns",
+    "network_used_during_benchmark": false
+  },
+  "dependencies": {
+    "ascon": {
+      "available": true,
+      "identity": "ascon.Ascon-AEAD128",
+      "version": "UNVERSIONED_SOURCE_INSTALL"
+    },
+    "cryptography": {
+      "available": true,
+      "identity": "cryptography/openssl",
+      "version": "50.0.1"
+    },
+    "matplotlib": {
+      "available": true,
+      "identity": "matplotlib",
+      "version": "3.11.1"
+    },
+    "py_ecc": {
+      "available": true,
+      "identity": "py_ecc.optimized_bls12_381",
+      "version": "8.0.0"
+    },
+    "python": {
+      "available": true,
+      "identity": "CPython",
+      "version": "3.12.10"
+    }
+  },
+  "dependency_backend_locked_before_timing": true,
+  "fixture": {
+    "seed_utf8": "E7-U2|UNIFIED_CONTROLLED_OVERHEAD_COMPARISON|FIXTURE|v1",
+    "derivation_rule": "SHA256(UTF8(seed) || '|' || UTF8(label) || '|' || decimal_counter), concatenated and truncated",
+    "scalar_rule": "(int.from_bytes(derive(label,64),'big') % (q-1)) + 1",
+    "derived_values": {
+      "SHA256_GENERIC_32B_REP_V1": {
+        "length_bytes": 32,
+        "sha256": "5cb4473420a33402c2f9d4e467b80cc11943410458a64c1fde76699896ca7988"
+      },
+      "ecdsa-private": {
+        "length_bytes": 64,
+        "sha256": "ed0574c52e72e12b768a4fe2157b74d361a08dfc125f79d65e3aa5b1e4a772e1"
+      },
+      "ecdsa-digest": {
+        "length_bytes": 32,
+        "sha256": "2efafde442179c8964a3601ecb75aafa3670d662f4dc606938d9b70aff7f81d4"
+      },
+      "proposed-outer-key": {
+        "length_bytes": 16,
+        "sha256": "073faa8351eea39f0cdea3c539d02cd63f694eac8feb9592db46c296ab63e3d9"
+      },
+      "proposed-outer-nonce": {
+        "length_bytes": 12,
+        "sha256": "fde70073d95f1b15786ee1487e9407d0f128d5442c9a4cc03ebc28be9ddd08ef"
+      },
+      "proposed-outer-plaintext": {
+        "length_bytes": 412,
+        "sha256": "fdb376dd3e0a461cbd660c069a23048716681537d926b4554be2daa046388031"
+      },
+      "proposed-outer-aad": {
+        "length_bytes": 72,
+        "sha256": "60c36140ccbce1ea1d08ae3f8a2eeaa565085ae79c1d86c604a49eb708df102e"
+      },
+      "ienc-target-private": {
+        "length_bytes": 64,
+        "sha256": "903175dee220d7004db1a4a764739335587a2deaaa85e4a85f7a9abd2ec924c2"
+      },
+      "ienc-ephemeral-private": {
+        "length_bytes": 64,
+        "sha256": "099d185cca996f3f035c6cc055fcf8cee9aae961d0d04a1982b6e2e7019d3978"
+      },
+      "ienc-nonce": {
+        "length_bytes": 12,
+        "sha256": "0ba3649e0953eed1ecaa2db4385ac1a9abfa46d5863b4c100a2da77d43e69202"
+      },
+      "ienc-plaintext": {
+        "length_bytes": 88,
+        "sha256": "b281498088f5e270477cd52f7c387a6bd8266c954c05df2132ddf4e8dd0862ef"
+      },
+      "ienc-binding": {
+        "length_bytes": 20,
+        "sha256": "82d96af357e71552227f40da07c443a17f0b5b7658e5483509d087f4bb692335"
+      },
+      "ascon-256-key": {
+        "length_bytes": 16,
+        "sha256": "95c85fa0db8885363bd8d54b15cbb4868d4981f64dd94435f05287a9dc30d4ae"
+      },
+      "ascon-256-nonce": {
+        "length_bytes": 16,
+        "sha256": "53b256607341d90db9c6718b905849cd92fc001f4ee44d0c39f42d9b6a8eea88"
+      },
+      "ascon-256-aad": {
+        "length_bytes": 16,
+        "sha256": "f2237fcb6c88db895ca6ee2b7fb4a4fcafb120d07145aa06cbbefa5769007463"
+      },
+      "ascon-256-plaintext": {
+        "length_bytes": 32,
+        "sha256": "9867529313c57a7c2bde3ffb8614c2e0e3e771b3e479dd43ead4fb1285790423"
+      },
+      "ascon-512-key": {
+        "length_bytes": 16,
+        "sha256": "a511c87bb6a051832b0b235d69c04c135d93db5e08a2fae08f36b8454d452d3f"
+      },
+      "ascon-512-nonce": {
+        "length_bytes": 16,
+        "sha256": "0ba92586faa125143a200654c65bc4b20cbe645dac5fe3bc03b1af93627728a3"
+      },
+      "ascon-512-aad": {
+        "length_bytes": 16,
+        "sha256": "3c9ed87259a2ce7b7b05e7e481bc09b8fc5c533ed9c0093b06841e124912b332"
+      },
+      "ascon-512-plaintext": {
+        "length_bytes": 64,
+        "sha256": "bf1662024c39f8b1b4f236e7f4871aa55412e412e50ecfb2b49621b8ca0ec4c5"
+      },
+      "ascon-640-key": {
+        "length_bytes": 16,
+        "sha256": "d918a71dfbc87c005b35537f2b7b8c80670dd8e5e9929e312c48231f2d794293"
+      },
+      "ascon-640-nonce": {
+        "length_bytes": 16,
+        "sha256": "4d5d454c538305da398b6e7b4cffb906bb701de249115e9c3892687a0fa80f50"
+      },
+      "ascon-640-aad": {
+        "length_bytes": 16,
+        "sha256": "b57f1b7f1304c660858181e76d02ea58f318a6a83e7303e93e30bd097e97e7f0"
+      },
+      "ascon-640-plaintext": {
+        "length_bytes": 80,
+        "sha256": "233fa301485473304b563db8cdbcb712984c8b43d0e351d27a56ecc09fa01625"
+      },
+      "scz-secret": {
+        "length_bytes": 64,
+        "sha256": "1dce02ac8d0d96f146f3de3fac03941fc29e7747b32296948e019534c18b6685"
+      },
+      "scz-coefficient-a": {
+        "length_bytes": 64,
+        "sha256": "87e60b9f72730c09827a74c9380fe4c2ee14b36cf7303e2b743db1a1e957fdf1"
+      },
+      "scz-coefficient-b": {
+        "length_bytes": 64,
+        "sha256": "874a5313d436e0824715b230c08c848f990169d1067f85cbfdafdde750761429"
+      },
+      "bls-scalar-a": {
+        "length_bytes": 64,
+        "sha256": "a8915df104dc005cae1203738247e0c5fc3813d04b55212b78e8d407892950c5"
+      },
+      "bls-scalar-b": {
+        "length_bytes": 64,
+        "sha256": "9843717f1f46c9ace6c87f01733da15fca766e9e4b9b199e73202f8c86e69f81"
+      },
+      "bls-gt-exponent": {
+        "length_bytes": 64,
+        "sha256": "652fadb94e2ab7108b64f11b4bb7d812019207d8c01cf93da2bb090e1e52e5f0"
+      },
+      "bcads-ed-key": {
+        "length_bytes": 16,
+        "sha256": "53ca6288788f5e023d29a02e87399d2d2f026995604460a05dc7cf3dc8f038d8"
+      },
+      "bcads-ed-nonce": {
+        "length_bytes": 12,
+        "sha256": "d065380fb5a563bce985579bd46dcfe9b90b0f609de4d08afec288f919794cd4"
+      },
+      "bcads-ed-plaintext": {
+        "length_bytes": 2112,
+        "sha256": "8a1171cad993cfa20ade058b55ee9c3bc9928579212d76fbd50d3da2f74e7f9c"
+      },
+      "bcads-ed-aad": {
+        "length_bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  },
+  "conformance": {
+    "generic_sha": {
+      "representative_id": "SHA256_GENERIC_32B_REP_V1",
+      "input_hex": "619c73cb17af1bf0c05f281e99c42bc44dd6a3a8030c3f515b5bdd7244ba3b55",
+      "digest_hex": "5cb4473420a33402c2f9d4e467b80cc11943410458a64c1fde76699896ca7988",
+      "passed": true
+    },
+    "ecdsa_p256": {
+      "curve": "secp256r1",
+      "hashing": "Prehashed SHA-256",
+      "valid_signature_verified": true,
+      "tampered_digest_rejected": true,
+      "passed": true
+    },
+    "proposed_outer_aes_gcm": {
+      "payload_bits": 3296,
+      "aad_bits": 576,
+      "key_bits": 128,
+      "iv_bits": 96,
+      "tag_bits": 128,
+      "round_trip": true,
+      "tamper_rejected": true,
+      "passed": true
+    },
+    "proposed_ienc_idec": {
+      "construction": "ephemeral-static P-256 ECDH + HKDF-SHA256 + AES-128-GCM",
+      "payload_bits": 704,
+      "binding_bits": 160,
+      "compressed_ephemeral_public_key_bits": 264,
+      "nonce_bits": 96,
+      "tag_bits": 128,
+      "ephemeral_key_construction_inside_encrypt": true,
+      "round_trip": true,
+      "wrong_binding_rejected": true,
+      "tamper_rejected": true,
+      "passed": true
+    },
+    "selap_ascon": [
+      {
+        "variant": "Ascon-AEAD128",
+        "payload_bits": 256,
+        "aad_bits": 128,
+        "key_bits": 128,
+        "nonce_bits": 128,
+        "tag_bits": 128,
+        "round_trip": true,
+        "tamper_rejected": true,
+        "passed": true
+      },
+      {
+        "variant": "Ascon-AEAD128",
+        "payload_bits": 512,
+        "aad_bits": 128,
+        "key_bits": 128,
+        "nonce_bits": 128,
+        "tag_bits": 128,
+        "round_trip": true,
+        "tamper_rejected": true,
+        "passed": true
+      },
+      {
+        "variant": "Ascon-AEAD128",
+        "payload_bits": 640,
+        "aad_bits": 128,
+        "key_bits": 128,
+        "nonce_bits": 128,
+        "tag_bits": 128,
+        "round_trip": true,
+        "tamper_rejected": true,
+        "passed": true
+      }
+    ],
+    "selap_puf": {
+      "response_hex": "94a0b5e320adb12841498bed4111e85b",
+      "passed": true
+    },
+    "selap_fuzzy_extractor": {
+      "code": "extended Hamming [256,247,4]",
+      "helper_syndrome_bits": 9,
+      "enrolled_syndrome": [
+        0,
+        0
+      ],
+      "noisy_syndrome": [
+        1,
+        1
+      ],
+      "corrected_input_equals_enrolled": true,
+      "key_hex": "70947aa6751aa216f2368c996a25de28",
+      "hkdf_does_not_increase_source_entropy": true,
+      "residual_min_entropy_caveat_preserved": true,
+      "passed": true
+    },
+    "scz_lagrange": {
+      "field": "P-256 scalar order",
+      "threshold": 3,
+      "share_count": 5,
+      "secret_hex": "54c6d4e247ac007c62117fe705e07482ba5d8eeaf2b413fc7ce4788966fe1377",
+      "recovered_secret_hex": "54c6d4e247ac007c62117fe705e07482ba5d8eeaf2b413fc7ce4788966fe1377",
+      "passed": true
+    },
+    "bls12_381": {
+      "backend_module": "py_ecc.optimized_bls12_381",
+      "full_pairing_final_exponentiation": true,
+      "pairing_non_identity": true,
+      "bilinearity_verified": true,
+      "g1_scalar_multiplication_non_identity": true,
+      "gt_base_non_identity": true,
+      "gt_exponentiation_non_identity": true,
+      "passed": true
+    },
+    "bcads_mgsd": {
+      "representative_id": "BCADS_MGSD_WARM_SHA256_GRID_V1",
+      "seed_hex": "ed765a497cb12d1d39f478772ba3017837a954611be8f5304a429f096e4f2f7c",
+      "disclosed_attribute_hex": "f11658a27bc6ee8044feccbb8d6d44b842c9a82b14bac13ac9b04d30a71925bd",
+      "disclosed_salt_hex": "1c44c5b4b3d07df6e93a7d5b1935d316023db12cf8449933ea8ddaadf9d489e3",
+      "Hroot_hex": "40daa0d27238ce7d4079a3bae2655c4434d6b6df42e0596c36797dd5f20031b2",
+      "Vroot_hex": "0ae8d629a6b425835d50a03fbbba10c6ca3779b2fe237d78513dd9cb76576d1a",
+      "ROOT_hex": "ada12d01b5f4b11ba3b2f05d43dac3f5fb78a0ab7efb9a1734c09a8b21bbe3af",
+      "vp_sha256": "5bbb7f214e7c6bf35e427807739efe55bca4419dce3544a8d1a2477ffd5d4adf",
+      "row_path_directions": [
+        "RIGHT",
+        "LEFT",
+        "RIGHT"
+      ],
+      "column_path_directions": [
+        "RIGHT",
+        "LEFT",
+        "RIGHT"
+      ],
+      "valid_proof_accepted": true,
+      "tamper_rejections": {
+        "disclosed attribute": true,
+        "salt": true,
+        "row sibling leaf": true,
+        "column sibling leaf": true,
+        "row Merkle path digest or direction": true,
+        "column Merkle path digest or direction": true,
+        "ROOT": true,
+        "opaque credential token": true,
+        "padding": true,
+        "magic, n, k or coordinate": true,
+        "expected ROOT or token": true
+      },
+      "passed": true
+    },
+    "bcads_ed": {
+      "payload_bits": 16896,
+      "aad_bits": 0,
+      "key_bits": 128,
+      "iv_bits": 96,
+      "tag_bits": 128,
+      "round_trip": true,
+      "tamper_rejected": true,
+      "passed": true
+    }
+  },
+  "operation_counts": {
+    "Proposed": {
+      "sha256_generic_32b": 12,
+      "ecdsa_p256_sign_prehashed": 3,
+      "ecdsa_p256_verify_prehashed": 4,
+      "p256_ienc_encrypt_704": 1,
+      "p256_ienc_decrypt_704": 1,
+      "aes128_gcm_encrypt_3296_aad576": 1,
+      "aes128_gcm_decrypt_3296_aad576": 1
+    },
+    "SELAP2026": {
+      "sha256_generic_32b": 18,
+      "puf_hmac_sha256_128": 1,
+      "fuzzy_extractor_rep_256": 1,
+      "ascon_aead128_encrypt_256_aad128": 2,
+      "ascon_aead128_decrypt_256_aad128": 2,
+      "ascon_aead128_encrypt_512_aad128": 1,
+      "ascon_aead128_decrypt_512_aad128": 1,
+      "ascon_aead128_encrypt_640_aad128": 1,
+      "ascon_aead128_decrypt_640_aad128": 1
+    },
+    "SCZ-HA2026": {
+      "p256_lagrange_recovery_3of5": 1,
+      "ecdsa_p256_verify_prehashed": 2
+    },
+    "BAZAM2025": {
+      "bls12_381_pairing_full": 6,
+      "sha256_generic_32b": 4,
+      "bls12_381_g1_scalar_multiplication": 1,
+      "bls12_381_gt_exponentiation": 4
+    },
+    "BCADS2026": {
+      "bls12_381_g1_scalar_multiplication": 3,
+      "sha256_generic_32b": 8,
+      "bcads_mgsd_vp_generate": 1,
+      "aes128_gcm_encrypt_16896_aad0": 1,
+      "aes128_gcm_decrypt_16896_aad0": 1,
+      "bcads_mgsd_vp_verify": 1
+    }
+  },
+  "operation_count_reconciliation": {
+    "passed": true,
+    "generic_sha_counts": {
+      "Proposed": 12,
+      "SELAP2026": 18,
+      "BAZAM2025": 4,
+      "BCADS2026": 8
+    },
+    "internal_hash_exclusions": [
+      "BCADS vp.Gen and vp.Verify",
+      "SELAP HMAC-based PUF",
+      "SELAP fuzzy-extractor HKDF-SHA256",
+      "Proposed IEnc/IDec HKDF",
+      "ECDSA internals"
+    ]
+  },
+  "timing_methodology": {
+    "timer": "time.perf_counter_ns",
+    "measured_batches": 7,
+    "final_primitive_timing": "median of seven batch means",
+    "operation_classes": {
+      "LIGHT": {
+        "warmup": 1000,
+        "iterations_per_batch": 10000
+      },
+      "MEDIUM": {
+        "warmup": 200,
+        "iterations_per_batch": 2000
+      },
+      "HEAVY": {
+        "warmup": 50,
+        "iterations_per_batch": 200
+      }
+    },
+    "outlier_removal": false,
+    "fastest_batch_selection": false
+  },
+  "primitive_timings": {
+    "sha256_generic_32b": {
+      "operation_class": "LIGHT",
+      "warmup": 1000,
+      "iterations_per_batch": 10000,
+      "batch_means_ns": [
+        702.34,
+        587.81,
+        648.37,
+        588.49,
+        663.98,
+        581.62,
+        579.05
+      ],
+      "median_ns": 588.49,
+      "median_ms": 0.00058849
+    },
+    "ecdsa_p256_sign_prehashed": {
+      "operation_class": "MEDIUM",
+      "warmup": 200,
+      "iterations_per_batch": 2000,
+      "batch_means_ns": [
+        23284.15,
+        22968.65,
+        22950.95,
+        23435.2,
+        24080.2,
+        23058.75,
+        24381.3
+      ],
+      "median_ns": 23284.15,
+      "median_ms": 0.02328415
+    },
+    "ecdsa_p256_verify_prehashed": {
+      "operation_class": "MEDIUM",
+      "warmup": 200,
+      "iterations_per_batch": 2000,
+      "batch_means_ns": [
+        59809.6,
+        58909.15,
+        59568.4,
+        59233.95,
+        59525.2,
+        65842.2,
+        74051.8
+      ],
+      "median_ns": 59568.4,
+      "median_ms": 0.0595684
+    },
+    "aes128_gcm_encrypt_3296_aad576": {
+      "operation_class": "LIGHT",
+      "warmup": 1000,
+      "iterations_per_batch": 10000,
+      "batch_means_ns": [
+        1380.63,
+        883.06,
+        916.72,
+        886.44,
+        937.84,
+        916.88,
+        1373.38
+      ],
+      "median_ns": 916.88,
+      "median_ms": 0.00091688
+    },
+    "aes128_gcm_decrypt_3296_aad576": {
+      "operation_class": "LIGHT",
+      "warmup": 1000,
+      "iterations_per_batch": 10000,
+      "batch_means_ns": [
+        928.12,
+        936.2,
+        884.21,
+        959.01,
+        1045.63,
+        1193.26,
+        1300.16
+      ],
+      "median_ns": 959.01,
+      "median_ms": 0.0009590099999999999
+    },
+    "p256_ienc_encrypt_704": {
+      "operation_class": "MEDIUM",
+      "warmup": 200,
+      "iterations_per_batch": 2000,
+      "batch_means_ns": [
+        119545.85,
+        111695.3,
+        117734.75,
+        126971.95,
+        115322.4,
+        117218.6,
+        111473.1
+      ],
+      "median_ns": 117218.6,
+      "median_ms": 0.1172186
+    },
+    "p256_ienc_decrypt_704": {
+      "operation_class": "MEDIUM",
+      "warmup": 200,
+      "iterations_per_batch": 2000,
+      "batch_means_ns": [
+        121319.8,
+        135357.15,
+        116101.2,
+        118900.35,
+        109146.35,
+        115074.6,
+        108864.05
+      ],
+      "median_ns": 116101.2,
+      "median_ms": 0.1161012
+    },
+    "ascon_aead128_encrypt_256_aad128": {
+      "operation_class": "LIGHT",
+      "warmup": 1000,
+      "iterations_per_batch": 10000,
+      "batch_means_ns": [
+        286379.1,
+        290410.98,
+        285298.27,
+        287561.61,
+        288155.76,
+        286368.85,
+        294726.56
+      ],
+      "median_ns": 287561.61,
+      "median_ms": 0.28756160999999997
+    },
+    "ascon_aead128_decrypt_256_aad128": {
+      "operation_class": "LIGHT",
+      "warmup": 1000,
+      "iterations_per_batch": 10000,
+      "batch_means_ns": [
+        319791.03,
+        302464.03,
+        316462.89,
+        307257.59,
+        305879.09,
+        299220.7,
+        309978.37
+      ],
+      "median_ns": 307257.59,
+      "median_ms": 0.30725759
+    },
+    "ascon_aead128_encrypt_512_aad128": {
+      "operation_class": "LIGHT",
+      "warmup": 1000,
+      "iterations_per_batch": 10000,
+      "batch_means_ns": [
+        367633.1,
+        372431.38,
+        377399.44,
+        390184.98,
+        374543.34,
+        378908.17,
+        377330.33
+      ],
+      "median_ns": 377330.33,
+      "median_ms": 0.37733033
+    },
+    "ascon_aead128_decrypt_512_aad128": {
+      "operation_class": "LIGHT",
+      "warmup": 1000,
+      "iterations_per_batch": 10000,
+      "batch_means_ns": [
+        377060.41,
+        392971.2,
+        377795.43,
+        391294.53,
+        365325.21,
+        380431.64,
+        397339.81
+      ],
+      "median_ns": 380431.64,
+      "median_ms": 0.38043164
+    },
+    "ascon_aead128_encrypt_640_aad128": {
+      "operation_class": "LIGHT",
+      "warmup": 1000,
+      "iterations_per_batch": 10000,
+      "batch_means_ns": [
+        431508.95,
+        414062.71,
+        428306.34,
+        439399.64,
+        440294.86,
+        424514.5,
+        434424.24
+      ],
+      "median_ns": 431508.95,
+      "median_ms": 0.43150895
+    },
+    "ascon_aead128_decrypt_640_aad128": {
+      "operation_class": "LIGHT",
+      "warmup": 1000,
+      "iterations_per_batch": 10000,
+      "batch_means_ns": [
+        424404.28,
+        427814.18,
+        428019.73,
+        423096.07,
+        411176.54,
+        417328.72,
+        424599.95
+      ],
+      "median_ns": 424404.28,
+      "median_ms": 0.42440428
+    },
+    "puf_hmac_sha256_128": {
+      "operation_class": "MEDIUM",
+      "warmup": 200,
+      "iterations_per_batch": 2000,
+      "batch_means_ns": [
+        2539.95,
+        3270.75,
+        2826.35,
+        2556.25,
+        2530.5,
+        2687.55,
+        2525.65
+      ],
+      "median_ns": 2556.25,
+      "median_ms": 0.00255625
+    },
+    "fuzzy_extractor_rep_256": {
+      "operation_class": "MEDIUM",
+      "warmup": 200,
+      "iterations_per_batch": 2000,
+      "batch_means_ns": [
+        34984.6,
+        31061.95,
+        35714.05,
+        30921.2,
+        28822.9,
+        30817.15,
+        30386.6
+      ],
+      "median_ns": 30921.2,
+      "median_ms": 0.0309212
+    },
+    "p256_lagrange_recovery_3of5": {
+      "operation_class": "MEDIUM",
+      "warmup": 200,
+      "iterations_per_batch": 2000,
+      "batch_means_ns": [
+        9141.25,
+        5857.25,
+        4806.0,
+        4629.3,
+        5708.25,
+        4712.65,
+        5402.3
+      ],
+      "median_ns": 5402.3,
+      "median_ms": 0.0054023000000000005
+    },
+    "bls12_381_pairing_full": {
+      "operation_class": "HEAVY",
+      "warmup": 50,
+      "iterations_per_batch": 200,
+      "batch_means_ns": [
+        521270276.0,
+        518676933.5,
+        515954046.0,
+        513529765.5,
+        453156049.0,
+        421965631.0,
+        421146258.0
+      ],
+      "median_ns": 513529765.5,
+      "median_ms": 513.5297655
+    },
+    "bls12_381_g1_scalar_multiplication": {
+      "operation_class": "HEAVY",
+      "warmup": 50,
+      "iterations_per_batch": 200,
+      "batch_means_ns": [
+        7316178.0,
+        7315027.0,
+        7264477.0,
+        7259079.5,
+        7320096.0,
+        7326514.0,
+        7281822.5
+      ],
+      "median_ns": 7315027.0,
+      "median_ms": 7.315027
+    },
+    "bls12_381_gt_exponentiation": {
+      "operation_class": "HEAVY",
+      "warmup": 50,
+      "iterations_per_batch": 200,
+      "batch_means_ns": [
+        22566188.0,
+        22584124.0,
+        22461863.5,
+        22666531.0,
+        22478739.0,
+        22455578.0,
+        22491458.0
+      ],
+      "median_ns": 22491458.0,
+      "median_ms": 22.491458
+    },
+    "bcads_mgsd_vp_generate": {
+      "operation_class": "MEDIUM",
+      "warmup": 200,
+      "iterations_per_batch": 2000,
+      "batch_means_ns": [
+        4262.5,
+        3989.7,
+        3960.45,
+        4043.5,
+        3953.9,
+        3972.4,
+        3951.1
+      ],
+      "median_ns": 3972.4,
+      "median_ms": 0.0039724
+    },
+    "bcads_mgsd_vp_verify": {
+      "operation_class": "MEDIUM",
+      "warmup": 200,
+      "iterations_per_batch": 2000,
+      "batch_means_ns": [
+        16596.2,
+        16315.5,
+        16371.3,
+        16455.45,
+        16511.95,
+        16531.1,
+        16618.55
+      ],
+      "median_ns": 16511.95,
+      "median_ms": 0.01651195
+    },
+    "aes128_gcm_encrypt_16896_aad0": {
+      "operation_class": "LIGHT",
+      "warmup": 1000,
+      "iterations_per_batch": 10000,
+      "batch_means_ns": [
+        1543.32,
+        1530.67,
+        1515.21,
+        1639.97,
+        1546.5,
+        1532.22,
+        1520.96
+      ],
+      "median_ns": 1532.22,
+      "median_ms": 0.00153222
+    },
+    "aes128_gcm_decrypt_16896_aad0": {
+      "operation_class": "LIGHT",
+      "warmup": 1000,
+      "iterations_per_batch": 10000,
+      "batch_means_ns": [
+        1521.47,
+        1488.21,
+        1474.34,
+        1471.57,
+        1466.14,
+        1474.0,
+        1478.27
+      ],
+      "median_ns": 1474.34,
+      "median_ms": 0.00147434
+    }
+  },
+  "method_computation_derivations": {
+    "Proposed": {
+      "components": [
+        {
+          "timing_key": "sha256_generic_32b",
+          "count": 12,
+          "median_ns": 588.49,
+          "contribution_unrounded_ms": 0.00706188
+        },
+        {
+          "timing_key": "ecdsa_p256_sign_prehashed",
+          "count": 3,
+          "median_ns": 23284.15,
+          "contribution_unrounded_ms": 0.06985245000000001
+        },
+        {
+          "timing_key": "ecdsa_p256_verify_prehashed",
+          "count": 4,
+          "median_ns": 59568.4,
+          "contribution_unrounded_ms": 0.2382736
+        },
+        {
+          "timing_key": "p256_ienc_encrypt_704",
+          "count": 1,
+          "median_ns": 117218.6,
+          "contribution_unrounded_ms": 0.1172186
+        },
+        {
+          "timing_key": "p256_ienc_decrypt_704",
+          "count": 1,
+          "median_ns": 116101.2,
+          "contribution_unrounded_ms": 0.1161012
+        },
+        {
+          "timing_key": "aes128_gcm_encrypt_3296_aad576",
+          "count": 1,
+          "median_ns": 916.88,
+          "contribution_unrounded_ms": 0.00091688
+        },
+        {
+          "timing_key": "aes128_gcm_decrypt_3296_aad576",
+          "count": 1,
+          "median_ns": 959.01,
+          "contribution_unrounded_ms": 0.0009590099999999999
+        }
+      ],
+      "total_unrounded_ns": 550383.62,
+      "total_unrounded_ms": 0.55038362
+    },
+    "SELAP2026": {
+      "components": [
+        {
+          "timing_key": "sha256_generic_32b",
+          "count": 18,
+          "median_ns": 588.49,
+          "contribution_unrounded_ms": 0.01059282
+        },
+        {
+          "timing_key": "puf_hmac_sha256_128",
+          "count": 1,
+          "median_ns": 2556.25,
+          "contribution_unrounded_ms": 0.00255625
+        },
+        {
+          "timing_key": "fuzzy_extractor_rep_256",
+          "count": 1,
+          "median_ns": 30921.2,
+          "contribution_unrounded_ms": 0.0309212
+        },
+        {
+          "timing_key": "ascon_aead128_encrypt_256_aad128",
+          "count": 2,
+          "median_ns": 287561.61,
+          "contribution_unrounded_ms": 0.5751232199999999
+        },
+        {
+          "timing_key": "ascon_aead128_decrypt_256_aad128",
+          "count": 2,
+          "median_ns": 307257.59,
+          "contribution_unrounded_ms": 0.61451518
+        },
+        {
+          "timing_key": "ascon_aead128_encrypt_512_aad128",
+          "count": 1,
+          "median_ns": 377330.33,
+          "contribution_unrounded_ms": 0.37733033
+        },
+        {
+          "timing_key": "ascon_aead128_decrypt_512_aad128",
+          "count": 1,
+          "median_ns": 380431.64,
+          "contribution_unrounded_ms": 0.38043164
+        },
+        {
+          "timing_key": "ascon_aead128_encrypt_640_aad128",
+          "count": 1,
+          "median_ns": 431508.95,
+          "contribution_unrounded_ms": 0.43150895
+        },
+        {
+          "timing_key": "ascon_aead128_decrypt_640_aad128",
+          "count": 1,
+          "median_ns": 424404.28,
+          "contribution_unrounded_ms": 0.42440428
+        }
+      ],
+      "total_unrounded_ns": 2847383.87,
+      "total_unrounded_ms": 2.8473838700000003
+    },
+    "SCZ-HA2026": {
+      "components": [
+        {
+          "timing_key": "p256_lagrange_recovery_3of5",
+          "count": 1,
+          "median_ns": 5402.3,
+          "contribution_unrounded_ms": 0.0054023000000000005
+        },
+        {
+          "timing_key": "ecdsa_p256_verify_prehashed",
+          "count": 2,
+          "median_ns": 59568.4,
+          "contribution_unrounded_ms": 0.1191368
+        }
+      ],
+      "total_unrounded_ns": 124539.1,
+      "total_unrounded_ms": 0.1245391
+    },
+    "BAZAM2025": {
+      "components": [
+        {
+          "timing_key": "bls12_381_pairing_full",
+          "count": 6,
+          "median_ns": 513529765.5,
+          "contribution_unrounded_ms": 3081.178593
+        },
+        {
+          "timing_key": "sha256_generic_32b",
+          "count": 4,
+          "median_ns": 588.49,
+          "contribution_unrounded_ms": 0.00235396
+        },
+        {
+          "timing_key": "bls12_381_g1_scalar_multiplication",
+          "count": 1,
+          "median_ns": 7315027.0,
+          "contribution_unrounded_ms": 7.315027
+        },
+        {
+          "timing_key": "bls12_381_gt_exponentiation",
+          "count": 4,
+          "median_ns": 22491458.0,
+          "contribution_unrounded_ms": 89.965832
+        }
+      ],
+      "total_unrounded_ns": 3178461805.96,
+      "total_unrounded_ms": 3178.46180596
+    },
+    "BCADS2026": {
+      "components": [
+        {
+          "timing_key": "bls12_381_g1_scalar_multiplication",
+          "count": 3,
+          "median_ns": 7315027.0,
+          "contribution_unrounded_ms": 21.945081
+        },
+        {
+          "timing_key": "sha256_generic_32b",
+          "count": 8,
+          "median_ns": 588.49,
+          "contribution_unrounded_ms": 0.00470792
+        },
+        {
+          "timing_key": "bcads_mgsd_vp_generate",
+          "count": 1,
+          "median_ns": 3972.4,
+          "contribution_unrounded_ms": 0.0039724
+        },
+        {
+          "timing_key": "aes128_gcm_encrypt_16896_aad0",
+          "count": 1,
+          "median_ns": 1532.22,
+          "contribution_unrounded_ms": 0.00153222
+        },
+        {
+          "timing_key": "aes128_gcm_decrypt_16896_aad0",
+          "count": 1,
+          "median_ns": 1474.34,
+          "contribution_unrounded_ms": 0.00147434
+        },
+        {
+          "timing_key": "bcads_mgsd_vp_verify",
+          "count": 1,
+          "median_ns": 16511.95,
+          "contribution_unrounded_ms": 0.01651195
+        }
+      ],
+      "total_unrounded_ns": 21973279.83,
+      "total_unrounded_ms": 21.97327983
+    }
+  },
+  "communication_derivations": {
+    "Proposed": {
+      "top_level_message_fields": {
+        "M1": [
+          {
+            "field_name": "Req_i^0",
+            "bit_length": 1088
+          },
+          {
+            "field_name": "sigma_i",
+            "bit_length": 512
+          }
+        ],
+        "M2": [
+          {
+            "field_name": "AD_i",
+            "bit_length": 576
+          },
+          {
+            "field_name": "C_K,i",
+            "bit_length": 1192
+          },
+          {
+            "field_name": "IV_i",
+            "bit_length": 96
+          },
+          {
+            "field_name": "C_cred,i",
+            "bit_length": 3296
+          },
+          {
+            "field_name": "Tag_i",
+            "bit_length": 128
+          }
+        ],
+        "M3": [
+          {
+            "field_name": "Ack_i^0",
+            "bit_length": 1240
+          },
+          {
+            "field_name": "sigma_T",
+            "bit_length": 512
+          }
+        ]
+      },
+      "message_totals_bits": {
+        "M1": 1600,
+        "M2": 5288,
+        "M3": 1752
+      },
+      "total_bits": 8640,
+      "nested_components_used_for_parent_validation_only": true
+    },
+    "SELAP2026": {
+      "top_level_message_fields": {
+        "Msg1": [
+          {
+            "field_name": "TID_Vt",
+            "bit_length": 128
+          },
+          {
+            "field_name": "C_A1",
+            "bit_length": 256
+          },
+          {
+            "field_name": "Tag_A1",
+            "bit_length": 128
+          },
+          {
+            "field_name": "T1",
+            "bit_length": 32
+          }
+        ],
+        "Msg2": [
+          {
+            "field_name": "C_A3",
+            "bit_length": 512
+          },
+          {
+            "field_name": "Tag_A3",
+            "bit_length": 128
+          },
+          {
+            "field_name": "T2",
+            "bit_length": 32
+          }
+        ],
+        "Msg3": [
+          {
+            "field_name": "C_A5",
+            "bit_length": 256
+          },
+          {
+            "field_name": "Tag_A5",
+            "bit_length": 128
+          },
+          {
+            "field_name": "T3",
+            "bit_length": 32
+          }
+        ],
+        "Msg4": [
+          {
+            "field_name": "C_A7",
+            "bit_length": 640
+          },
+          {
+            "field_name": "Tag_A7",
+            "bit_length": 128
+          },
+          {
+            "field_name": "T4",
+            "bit_length": 32
+          }
+        ]
+      },
+      "message_totals_bits": {
+        "Msg1": 544,
+        "Msg2": 672,
+        "Msg3": 416,
+        "Msg4": 800
+      },
+      "total_bits": 2432,
+      "nested_components_used_for_parent_validation_only": true
+    },
+    "SCZ-HA2026": {
+      "top_level_message_fields": {
+        "Case2_request": [
+          {
+            "field_name": "sigmaVA",
+            "bit_length": 512
+          },
+          {
+            "field_name": "sigmaA_share",
+            "bit_length": 256
+          },
+          {
+            "field_name": "pkDE1",
+            "bit_length": 264
+          },
+          {
+            "field_name": "timeA",
+            "bit_length": 32
+          },
+          {
+            "field_name": "timeB",
+            "bit_length": 32
+          },
+          {
+            "field_name": "PIDVi",
+            "bit_length": 80
+          },
+          {
+            "field_name": "proofA",
+            "bit_length": 1792
+          }
+        ],
+        "Case2_response": [
+          {
+            "field_name": "Infcom2",
+            "bit_length": 528
+          },
+          {
+            "field_name": "proofB",
+            "bit_length": 1792
+          }
+        ]
+      },
+      "message_totals_bits": {
+        "Case2_request": 2968,
+        "Case2_response": 2320
+      },
+      "total_bits": 5288,
+      "nested_components_used_for_parent_validation_only": true
+    },
+    "BAZAM2025": {
+      "top_level_message_fields": {
+        "request": [
+          {
+            "field_name": "Epac",
+            "bit_length": 752
+          },
+          {
+            "field_name": "v",
+            "bit_length": 256
+          },
+          {
+            "field_name": "W",
+            "bit_length": 384
+          }
+        ],
+        "response": [
+          {
+            "field_name": "m",
+            "bit_length": 400
+          }
+        ]
+      },
+      "message_totals_bits": {
+        "request": 1392,
+        "response": 400
+      },
+      "total_bits": 1792,
+      "nested_components_used_for_parent_validation_only": true
+    },
+    "BCADS2026": {
+      "top_level_message_fields": {
+        "M3": [
+          {
+            "field_name": "gamma_rv",
+            "bit_length": 384
+          },
+          {
+            "field_name": "Ed",
+            "bit_length": 17120
+          },
+          {
+            "field_name": "T3",
+            "bit_length": 64
+          }
+        ],
+        "M4": [
+          {
+            "field_name": "rR",
+            "bit_length": 256
+          },
+          {
+            "field_name": "MAC",
+            "bit_length": 256
+          },
+          {
+            "field_name": "T4",
+            "bit_length": 64
+          }
+        ]
+      },
+      "message_totals_bits": {
+        "M3": 17568,
+        "M4": 576
+      },
+      "total_bits": 18144,
+      "nested_components_used_for_parent_validation_only": true
+    }
+  },
+  "primary_results": [
+    {
+      "method": "Proposed",
+      "controlled_computation_overhead_ms": 0.55038362,
+      "controlled_communication_overhead_bits": 8640
+    },
+    {
+      "method": "SELAP2026",
+      "controlled_computation_overhead_ms": 2.8473838700000003,
+      "controlled_communication_overhead_bits": 2432
+    },
+    {
+      "method": "SCZ-HA2026",
+      "controlled_computation_overhead_ms": 0.1245391,
+      "controlled_communication_overhead_bits": 5288
+    },
+    {
+      "method": "BAZAM2025",
+      "controlled_computation_overhead_ms": 3178.46180596,
+      "controlled_communication_overhead_bits": 1792
+    },
+    {
+      "method": "BCADS2026",
+      "controlled_computation_overhead_ms": 21.97327983,
+      "controlled_communication_overhead_bits": 18144
+    }
+  ]
+}

@@ -1,0 +1,5927 @@
+{
+  "schema_version": 1,
+  "experiment_id": "E4-LOCAL-V2U-BREAKER",
+  "benchmark_name": "E4 Local V2U Monitoring, Local Breaker, and Reporting",
+  "method_order": [
+    "Proposed Dual-Condition Breaker",
+    "History-only Breaker",
+    "No Local Breaker"
+  ],
+  "scenario_order": [
+    "E4_TRANSIENT",
+    "E4_PERSISTENT"
+  ],
+  "environment": {
+    "python_version": "3.12.10",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "matplotlib_version": "3.11.1"
+  },
+  "execution_contract": {
+    "type": "DETERMINISTIC_CONTROLLED_LOCAL_MONITOR_EXPERIMENT",
+    "deterministic": true,
+    "rng": false,
+    "seed": false,
+    "replicate": false,
+    "monte_carlo": false,
+    "mean_over_runs": false,
+    "sample_sd": false,
+    "confidence_interval": false,
+    "student_t": false,
+    "executions_per_subscenario": 1,
+    "observation_interval_s": 1.0,
+    "observations_per_subscenario": 60,
+    "evaluation_mode": "OPEN_LOOP_BREAKER_DIAGNOSTIC_EVALUATION",
+    "breaker_signal_semantics": "LOCAL_PROTECTION_DECISION_SIGNAL"
+  },
+  "output_policy": {
+    "clipping": false,
+    "normalization": false,
+    "rescaling": false,
+    "ranking": false,
+    "winner_selection": false,
+    "composite_score": false,
+    "universal_earlier_is_better": false
+  },
+  "records": [
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 0.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8600000000000001,
+      "selected_mu": 0.8,
+      "historical_trust": 0.5720000000000001,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.07200000000000006,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.07200000000000006,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.07200000000000006,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 1.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8672000000000001,
+      "selected_mu": 0.8,
+      "historical_trust": 0.63104,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.13104000000000005,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.13104000000000005,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.13104000000000005,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 2.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8731040000000001,
+      "selected_mu": 0.8,
+      "historical_trust": 0.6794528000000001,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.17945280000000008,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.17945280000000008,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.17945280000000008,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 3.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.87794528,
+      "selected_mu": 0.8,
+      "historical_trust": 0.719151296,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.21915129600000005,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.21915129600000005,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.21915129600000005,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 4.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8819151296000001,
+      "selected_mu": 0.8,
+      "historical_trust": 0.75170406272,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.25170406272,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.25170406272,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.25170406272,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 5.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.885170406272,
+      "selected_mu": 0.8,
+      "historical_trust": 0.7783973314304,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.2783973314304,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.2783973314304,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.2783973314304,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 6.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8878397331430401,
+      "selected_mu": 0.8,
+      "historical_trust": 0.800285811772928,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.300285811772928,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.300285811772928,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.300285811772928,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 7.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8900285811772929,
+      "selected_mu": 0.8,
+      "historical_trust": 0.818234365653801,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.31823436565380103,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.31823436565380103,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.31823436565380103,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 8.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8918234365653801,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8329521798361168,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.3329521798361168,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.3329521798361168,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.3329521798361168,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 9.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8932952179836118,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8450207874656158,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.3450207874656158,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.3450207874656158,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.3450207874656158,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 10.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8945020787465616,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8549170457218049,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.35491704572180494,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.35491704572180494,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.35491704572180494,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 11.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8954917045721805,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8630319774918801,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.3630319774918801,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.3630319774918801,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.3630319774918801,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 12.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8963031977491881,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8696862215433417,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.36968622154334174,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.36968622154334174,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.36968622154334174,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 13.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8969686221543343,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8751427016655402,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.3751427016655402,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.3751427016655402,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.3751427016655402,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 14.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.897514270166554,
+      "selected_mu": 0.8,
+      "historical_trust": 0.879617015365743,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.379617015365743,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.379617015365743,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.379617015365743,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 15.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8979617015365744,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8832859525999093,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.3832859525999093,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.3832859525999093,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.3832859525999093,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 16.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.898328595259991,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8862944811319255,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.38629448113192555,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.38629448113192555,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.38629448113192555,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 17.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8986294481131926,
+      "selected_mu": 0.8,
+      "historical_trust": 0.888761474528179,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.388761474528179,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.388761474528179,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.388761474528179,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 18.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.898876147452818,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8907844091131069,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.39078440911310686,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.39078440911310686,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.39078440911310686,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 19.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8990784409113107,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8924432154727476,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.39244321547274763,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.39244321547274763,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.39244321547274763,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 20.0,
+      "service_state": "ANOMALOUS",
+      "ack_ratio": 0.1,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.34,
+      "contextual_trust": 0.3952443215472747,
+      "selected_mu": 0.2,
+      "historical_trust": 0.4946841003323693,
+      "abnormality": true,
+      "counter": 1,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": 0.005315899667630686,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": 0.005315899667630686,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": 0.005315899667630686,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 21.0,
+      "service_state": "ANOMALOUS",
+      "ack_ratio": 0.1,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.34,
+      "contextual_trust": 0.3554684100332369,
+      "selected_mu": 0.2,
+      "historical_trust": 0.3833115480930634,
+      "abnormality": true,
+      "counter": 2,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": 0.11668845190693661,
+          "abnormal_drop_trigger": true,
+          "report_trigger": true,
+          "admissible": true,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": true,
+          "T_rep_pre": 0.5,
+          "trust_drop": 0.11668845190693661,
+          "abnormal_drop_trigger": true,
+          "report_trigger": true,
+          "admissible": true,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": 0.11668845190693661,
+          "abnormal_drop_trigger": true,
+          "report_trigger": true,
+          "admissible": true,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 22.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8483311548093064,
+      "selected_mu": 0.8,
+      "historical_trust": 0.476315469436312,
+      "abnormality": false,
+      "counter": 1,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.09300392134324859,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.09300392134324859,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.09300392134324859,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 23.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8576315469436313,
+      "selected_mu": 0.8,
+      "historical_trust": 0.5525786849377758,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.16926713684471245,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.16926713684471245,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.16926713684471245,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 24.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8652578684937777,
+      "selected_mu": 0.8,
+      "historical_trust": 0.6151145216489762,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.23180297355591278,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.23180297355591278,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.23180297355591278,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 25.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8715114521648977,
+      "selected_mu": 0.8,
+      "historical_trust": 0.6663939077521605,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.28308235965909706,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.28308235965909706,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.28308235965909706,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 26.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8766393907752161,
+      "selected_mu": 0.8,
+      "historical_trust": 0.7084430043567715,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.32513145626370815,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.32513145626370815,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.32513145626370815,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 27.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8808443004356772,
+      "selected_mu": 0.8,
+      "historical_trust": 0.7429232635725527,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.3596117154794893,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.3596117154794893,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.3596117154794893,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 28.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8842923263572553,
+      "selected_mu": 0.8,
+      "historical_trust": 0.7711970761294932,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.3878855280364298,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.3878855280364298,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.3878855280364298,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 29.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8871197076129493,
+      "selected_mu": 0.8,
+      "historical_trust": 0.7943816024261845,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.4110700543331211,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.4110700543331211,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.4110700543331211,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 30.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8894381602426185,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8133929139894713,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.43008136589640794,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.43008136589640794,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.43008136589640794,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 31.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8913392913989472,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8289821894713665,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.4456706413783031,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.4456706413783031,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.4456706413783031,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 32.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8928982189471367,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8417653953665205,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.4584538472734571,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.4584538472734571,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.4584538472734571,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 33.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8941765395366521,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8522476242005468,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.4689360761074834,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.4689360761074834,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.4689360761074834,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 34.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8952247624200548,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8608430518444483,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.4775315037513849,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.4775315037513849,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.4775315037513849,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 35.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8960843051844449,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8678913025124476,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.4845797544193842,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.4845797544193842,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.4845797544193842,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 36.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8967891302512448,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8736708680602071,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.4903593199671437,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.4903593199671437,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.4903593199671437,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 37.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8973670868060207,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8784101118093699,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.4950985637163065,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.4950985637163065,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.4950985637163065,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 38.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8978410111809371,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8822962916836834,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.49898474359062,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.49898474359062,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.49898474359062,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 39.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8982296291683683,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8854829591806205,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.502171411087557,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.502171411087557,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.502171411087557,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 40.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8985482959180621,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8880960265281088,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5047844784350455,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5047844784350455,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5047844784350455,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 41.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.898809602652811,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8902387417530493,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.506927193659986,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.506927193659986,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.506927193659986,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 42.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8990238741753049,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8919957682375005,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.508684220144437,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.508684220144437,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.508684220144437,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 43.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8991995768237501,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8934365299547504,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5101249818616871,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5101249818616871,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5101249818616871,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 44.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.899343652995475,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8946179545628954,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.511306406469832,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.511306406469832,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.511306406469832,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 45.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8994617954562896,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8955867227415742,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5122751746485108,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5122751746485108,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5122751746485108,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 46.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8995586722741574,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8963811126480908,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5130695645550274,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5130695645550274,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5130695645550274,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 47.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8996381112648091,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8970325123714344,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5137209642783711,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5137209642783711,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5137209642783711,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 48.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8997032512371435,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8975666601445763,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5142551120515129,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5142551120515129,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5142551120515129,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 49.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8997566660144577,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8980046613185526,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5146931132254893,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5146931132254893,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5146931132254893,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 50.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8998004661318553,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8983638222812131,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5150522741881498,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5150522741881498,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5150522741881498,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 51.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8998363822281213,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8986583342705948,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5153467861775314,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5153467861775314,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5153467861775314,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 52.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8998658334270595,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8988998341018878,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5155882860088243,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5155882860088243,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5155882860088243,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 53.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8998899834101888,
+      "selected_mu": 0.8,
+      "historical_trust": 0.899097863963548,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5157863158704845,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5157863158704845,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5157863158704845,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 54.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8999097863963549,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8992602484501093,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.515948700357046,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.515948700357046,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.515948700357046,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 55.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8999260248450109,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8993934037290897,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5160818556360263,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5160818556360263,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5160818556360263,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 56.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.899939340372909,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8995025910578536,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5161910429647902,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5161910429647902,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5161910429647902,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 57.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8999502591057854,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8995921246674399,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5162805765743765,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5162805765743765,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5162805765743765,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 58.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.899959212466744,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8996655422273007,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5163539941342372,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5163539941342372,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5163539941342372,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_TRANSIENT",
+      "time_s": 59.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8999665542227301,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8997257446263865,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5164141965333231,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5164141965333231,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5164141965333231,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 0.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8600000000000001,
+      "selected_mu": 0.8,
+      "historical_trust": 0.5720000000000001,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.07200000000000006,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.07200000000000006,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.07200000000000006,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 1.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8672000000000001,
+      "selected_mu": 0.8,
+      "historical_trust": 0.63104,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.13104000000000005,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.13104000000000005,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.13104000000000005,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 2.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8731040000000001,
+      "selected_mu": 0.8,
+      "historical_trust": 0.6794528000000001,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.17945280000000008,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.17945280000000008,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.17945280000000008,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 3.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.87794528,
+      "selected_mu": 0.8,
+      "historical_trust": 0.719151296,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.21915129600000005,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.21915129600000005,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.21915129600000005,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 4.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8819151296000001,
+      "selected_mu": 0.8,
+      "historical_trust": 0.75170406272,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.25170406272,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.25170406272,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.25170406272,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 5.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.885170406272,
+      "selected_mu": 0.8,
+      "historical_trust": 0.7783973314304,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.2783973314304,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.2783973314304,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.2783973314304,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 6.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8878397331430401,
+      "selected_mu": 0.8,
+      "historical_trust": 0.800285811772928,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.300285811772928,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.300285811772928,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.300285811772928,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 7.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8900285811772929,
+      "selected_mu": 0.8,
+      "historical_trust": 0.818234365653801,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.31823436565380103,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.31823436565380103,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.31823436565380103,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 8.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8918234365653801,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8329521798361168,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.3329521798361168,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.3329521798361168,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.3329521798361168,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 9.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8932952179836118,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8450207874656158,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.3450207874656158,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.3450207874656158,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.3450207874656158,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 10.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8945020787465616,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8549170457218049,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.35491704572180494,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.35491704572180494,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.35491704572180494,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 11.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8954917045721805,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8630319774918801,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.3630319774918801,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.3630319774918801,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.3630319774918801,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 12.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8963031977491881,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8696862215433417,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.36968622154334174,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.36968622154334174,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.36968622154334174,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 13.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8969686221543343,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8751427016655402,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.3751427016655402,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.3751427016655402,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.3751427016655402,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 14.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.897514270166554,
+      "selected_mu": 0.8,
+      "historical_trust": 0.879617015365743,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.379617015365743,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.379617015365743,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.379617015365743,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 15.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8979617015365744,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8832859525999093,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.3832859525999093,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.3832859525999093,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.3832859525999093,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 16.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.898328595259991,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8862944811319255,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.38629448113192555,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.38629448113192555,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.38629448113192555,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 17.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8986294481131926,
+      "selected_mu": 0.8,
+      "historical_trust": 0.888761474528179,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.388761474528179,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.388761474528179,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.388761474528179,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 18.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.898876147452818,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8907844091131069,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.39078440911310686,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.39078440911310686,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.39078440911310686,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 19.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8990784409113107,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8924432154727476,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.39244321547274763,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.39244321547274763,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": -0.39244321547274763,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 20.0,
+      "service_state": "ANOMALOUS",
+      "ack_ratio": 0.1,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.34,
+      "contextual_trust": 0.3952443215472747,
+      "selected_mu": 0.2,
+      "historical_trust": 0.4946841003323693,
+      "abnormality": true,
+      "counter": 1,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": 0.005315899667630686,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": 0.005315899667630686,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": 0.005315899667630686,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.5
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 21.0,
+      "service_state": "ANOMALOUS",
+      "ack_ratio": 0.1,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.34,
+      "contextual_trust": 0.3554684100332369,
+      "selected_mu": 0.2,
+      "historical_trust": 0.3833115480930634,
+      "abnormality": true,
+      "counter": 2,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": 0.11668845190693661,
+          "abnormal_drop_trigger": true,
+          "report_trigger": true,
+          "admissible": true,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": true,
+          "T_rep_pre": 0.5,
+          "trust_drop": 0.11668845190693661,
+          "abnormal_drop_trigger": true,
+          "report_trigger": true,
+          "admissible": true,
+          "T_rep_post": 0.3833115480930634
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.5,
+          "trust_drop": 0.11668845190693661,
+          "abnormal_drop_trigger": true,
+          "report_trigger": true,
+          "admissible": true,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 22.0,
+      "service_state": "ANOMALOUS",
+      "ack_ratio": 0.1,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.34,
+      "contextual_trust": 0.3443311548093063,
+      "selected_mu": 0.2,
+      "historical_trust": 0.3521272334660578,
+      "abnormality": true,
+      "counter": 3,
+      "full_breaker": true,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": true,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": 0.031184314627005605,
+          "abnormal_drop_trigger": false,
+          "report_trigger": true,
+          "admissible": true,
+          "T_rep_post": 0.3521272334660578
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": true,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": 0.031184314627005605,
+          "abnormal_drop_trigger": false,
+          "report_trigger": true,
+          "admissible": true,
+          "T_rep_post": 0.3521272334660578
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": 0.031184314627005605,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 23.0,
+      "service_state": "ANOMALOUS",
+      "ack_ratio": 0.1,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.34,
+      "contextual_trust": 0.3412127233466058,
+      "selected_mu": 0.2,
+      "historical_trust": 0.34339562537049617,
+      "abnormality": true,
+      "counter": 3,
+      "full_breaker": true,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": true,
+          "T_rep_pre": 0.3521272334660578,
+          "trust_drop": 0.008731608095561616,
+          "abnormal_drop_trigger": false,
+          "report_trigger": true,
+          "admissible": true,
+          "T_rep_post": 0.34339562537049617
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": true,
+          "T_rep_pre": 0.3521272334660578,
+          "trust_drop": 0.008731608095561616,
+          "abnormal_drop_trigger": false,
+          "report_trigger": true,
+          "admissible": true,
+          "T_rep_post": 0.34339562537049617
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": 0.03991592272256722,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 24.0,
+      "service_state": "ANOMALOUS",
+      "ack_ratio": 0.1,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.34,
+      "contextual_trust": 0.3403395625370496,
+      "selected_mu": 0.2,
+      "historical_trust": 0.34095077510373895,
+      "abnormality": true,
+      "counter": 3,
+      "full_breaker": true,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": true,
+          "T_rep_pre": 0.34339562537049617,
+          "trust_drop": 0.002444850266757226,
+          "abnormal_drop_trigger": false,
+          "report_trigger": true,
+          "admissible": true,
+          "T_rep_post": 0.34095077510373895
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": true,
+          "T_rep_pre": 0.34339562537049617,
+          "trust_drop": 0.002444850266757226,
+          "abnormal_drop_trigger": false,
+          "report_trigger": true,
+          "admissible": true,
+          "T_rep_post": 0.34095077510373895
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": 0.04236077298932445,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 25.0,
+      "service_state": "ANOMALOUS",
+      "ack_ratio": 0.1,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.34,
+      "contextual_trust": 0.3400950775103739,
+      "selected_mu": 0.2,
+      "historical_trust": 0.3402662170290469,
+      "abnormality": true,
+      "counter": 3,
+      "full_breaker": true,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": true,
+          "T_rep_pre": 0.34095077510373895,
+          "trust_drop": 0.0006845580746920321,
+          "abnormal_drop_trigger": false,
+          "report_trigger": true,
+          "admissible": true,
+          "T_rep_post": 0.3402662170290469
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": true,
+          "T_rep_pre": 0.34095077510373895,
+          "trust_drop": 0.0006845580746920321,
+          "abnormal_drop_trigger": false,
+          "report_trigger": true,
+          "admissible": true,
+          "T_rep_post": 0.3402662170290469
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": 0.04304533106401648,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 26.0,
+      "service_state": "ANOMALOUS",
+      "ack_ratio": 0.1,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.34,
+      "contextual_trust": 0.3400266217029047,
+      "selected_mu": 0.2,
+      "historical_trust": 0.34007454076813315,
+      "abnormality": true,
+      "counter": 3,
+      "full_breaker": true,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": true,
+          "T_rep_pre": 0.3402662170290469,
+          "trust_drop": 0.00019167626091376455,
+          "abnormal_drop_trigger": false,
+          "report_trigger": true,
+          "admissible": true,
+          "T_rep_post": 0.34007454076813315
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": true,
+          "T_rep_pre": 0.3402662170290469,
+          "trust_drop": 0.00019167626091376455,
+          "abnormal_drop_trigger": false,
+          "report_trigger": true,
+          "admissible": true,
+          "T_rep_post": 0.34007454076813315
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": 0.04323700732493024,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 27.0,
+      "service_state": "ANOMALOUS",
+      "ack_ratio": 0.1,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.34,
+      "contextual_trust": 0.3400074540768133,
+      "selected_mu": 0.2,
+      "historical_trust": 0.3400208714150773,
+      "abnormality": true,
+      "counter": 3,
+      "full_breaker": true,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": true,
+          "T_rep_pre": 0.34007454076813315,
+          "trust_drop": 5.366935305584075e-05,
+          "abnormal_drop_trigger": false,
+          "report_trigger": true,
+          "admissible": true,
+          "T_rep_post": 0.3400208714150773
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": true,
+          "T_rep_pre": 0.34007454076813315,
+          "trust_drop": 5.366935305584075e-05,
+          "abnormal_drop_trigger": false,
+          "report_trigger": true,
+          "admissible": true,
+          "T_rep_post": 0.3400208714150773
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": 0.043290676677986084,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 28.0,
+      "service_state": "ANOMALOUS",
+      "ack_ratio": 0.1,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.34,
+      "contextual_trust": 0.34000208714150776,
+      "selected_mu": 0.2,
+      "historical_trust": 0.3400058439962217,
+      "abnormality": true,
+      "counter": 3,
+      "full_breaker": true,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": true,
+          "T_rep_pre": 0.3400208714150773,
+          "trust_drop": 1.5027418855617647e-05,
+          "abnormal_drop_trigger": false,
+          "report_trigger": true,
+          "admissible": true,
+          "T_rep_post": 0.3400058439962217
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": true,
+          "T_rep_pre": 0.3400208714150773,
+          "trust_drop": 1.5027418855617647e-05,
+          "abnormal_drop_trigger": false,
+          "report_trigger": true,
+          "admissible": true,
+          "T_rep_post": 0.3400058439962217
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": 0.0433057040968417,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 29.0,
+      "service_state": "ANOMALOUS",
+      "ack_ratio": 0.1,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.34,
+      "contextual_trust": 0.34000058439962216,
+      "selected_mu": 0.2,
+      "historical_trust": 0.3400016363189421,
+      "abnormality": true,
+      "counter": 3,
+      "full_breaker": true,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": true,
+          "T_rep_pre": 0.3400058439962217,
+          "trust_drop": 4.2076772795995865e-06,
+          "abnormal_drop_trigger": false,
+          "report_trigger": true,
+          "admissible": true,
+          "T_rep_post": 0.3400016363189421
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": true,
+          "T_rep_pre": 0.3400058439962217,
+          "trust_drop": 4.2076772795995865e-06,
+          "abnormal_drop_trigger": false,
+          "report_trigger": true,
+          "admissible": true,
+          "T_rep_post": 0.3400016363189421
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": 0.0433099117741213,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 30.0,
+      "service_state": "ANOMALOUS",
+      "ack_ratio": 0.1,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.34,
+      "contextual_trust": 0.3400001636318942,
+      "selected_mu": 0.2,
+      "historical_trust": 0.3400004581693038,
+      "abnormality": true,
+      "counter": 3,
+      "full_breaker": true,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": true,
+          "T_rep_pre": 0.3400016363189421,
+          "trust_drop": 1.1781496382923251e-06,
+          "abnormal_drop_trigger": false,
+          "report_trigger": true,
+          "admissible": true,
+          "T_rep_post": 0.3400004581693038
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": true,
+          "T_rep_pre": 0.3400016363189421,
+          "trust_drop": 1.1781496382923251e-06,
+          "abnormal_drop_trigger": false,
+          "report_trigger": true,
+          "admissible": true,
+          "T_rep_post": 0.3400004581693038
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": 0.043311089923759594,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 31.0,
+      "service_state": "ANOMALOUS",
+      "ack_ratio": 0.1,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.34,
+      "contextual_trust": 0.3400000458169304,
+      "selected_mu": 0.2,
+      "historical_trust": 0.3400001282874051,
+      "abnormality": true,
+      "counter": 3,
+      "full_breaker": true,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": true,
+          "T_rep_pre": 0.3400004581693038,
+          "trust_drop": 3.298818986863239e-07,
+          "abnormal_drop_trigger": false,
+          "report_trigger": true,
+          "admissible": true,
+          "T_rep_post": 0.3400001282874051
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": true,
+          "T_rep_pre": 0.3400004581693038,
+          "trust_drop": 3.298818986863239e-07,
+          "abnormal_drop_trigger": false,
+          "report_trigger": true,
+          "admissible": true,
+          "T_rep_post": 0.3400001282874051
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": 0.04331141980565828,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 32.0,
+      "service_state": "ANOMALOUS",
+      "ack_ratio": 0.1,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.34,
+      "contextual_trust": 0.34000001282874054,
+      "selected_mu": 0.2,
+      "historical_trust": 0.34000003592047345,
+      "abnormality": true,
+      "counter": 3,
+      "full_breaker": true,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": true,
+          "T_rep_pre": 0.3400001282874051,
+          "trust_drop": 9.236693165881604e-08,
+          "abnormal_drop_trigger": false,
+          "report_trigger": true,
+          "admissible": true,
+          "T_rep_post": 0.34000003592047345
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": true,
+          "T_rep_pre": 0.3400001282874051,
+          "trust_drop": 9.236693165881604e-08,
+          "abnormal_drop_trigger": false,
+          "report_trigger": true,
+          "admissible": true,
+          "T_rep_post": 0.34000003592047345
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": 0.04331151217258994,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 33.0,
+      "service_state": "ANOMALOUS",
+      "ack_ratio": 0.1,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.34,
+      "contextual_trust": 0.34000000359204735,
+      "selected_mu": 0.2,
+      "historical_trust": 0.3400000100577326,
+      "abnormality": true,
+      "counter": 3,
+      "full_breaker": true,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": true,
+          "T_rep_pre": 0.34000003592047345,
+          "trust_drop": 2.586274083782314e-08,
+          "abnormal_drop_trigger": false,
+          "report_trigger": true,
+          "admissible": true,
+          "T_rep_post": 0.3400000100577326
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": true,
+          "T_rep_pre": 0.34000003592047345,
+          "trust_drop": 2.586274083782314e-08,
+          "abnormal_drop_trigger": false,
+          "report_trigger": true,
+          "admissible": true,
+          "T_rep_post": 0.3400000100577326
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": 0.04331153803533078,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 34.0,
+      "service_state": "ANOMALOUS",
+      "ack_ratio": 0.1,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.34,
+      "contextual_trust": 0.34000000100577327,
+      "selected_mu": 0.2,
+      "historical_trust": 0.34000000281616516,
+      "abnormality": true,
+      "counter": 3,
+      "full_breaker": true,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": true,
+          "T_rep_pre": 0.3400000100577326,
+          "trust_drop": 7.2415674567949395e-09,
+          "abnormal_drop_trigger": false,
+          "report_trigger": true,
+          "admissible": true,
+          "T_rep_post": 0.34000000281616516
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": true,
+          "T_rep_pre": 0.3400000100577326,
+          "trust_drop": 7.2415674567949395e-09,
+          "abnormal_drop_trigger": false,
+          "report_trigger": true,
+          "admissible": true,
+          "T_rep_post": 0.34000000281616516
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": 0.04331154527689823,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 35.0,
+      "service_state": "ANOMALOUS",
+      "ack_ratio": 0.1,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.34,
+      "contextual_trust": 0.34000000028161653,
+      "selected_mu": 0.2,
+      "historical_trust": 0.34000000078852627,
+      "abnormality": true,
+      "counter": 3,
+      "full_breaker": true,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": true,
+          "T_rep_pre": 0.34000000281616516,
+          "trust_drop": 2.027638890123029e-09,
+          "abnormal_drop_trigger": false,
+          "report_trigger": true,
+          "admissible": true,
+          "T_rep_post": 0.34000000078852627
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": true,
+          "T_rep_pre": 0.34000000281616516,
+          "trust_drop": 2.027638890123029e-09,
+          "abnormal_drop_trigger": false,
+          "report_trigger": true,
+          "admissible": true,
+          "T_rep_post": 0.34000000078852627
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": 0.043311547304537124,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 36.0,
+      "service_state": "ANOMALOUS",
+      "ack_ratio": 0.1,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.34,
+      "contextual_trust": 0.3400000000788526,
+      "selected_mu": 0.2,
+      "historical_trust": 0.34000000022078736,
+      "abnormality": true,
+      "counter": 3,
+      "full_breaker": true,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": true,
+          "T_rep_pre": 0.34000000078852627,
+          "trust_drop": 5.677389114389086e-10,
+          "abnormal_drop_trigger": false,
+          "report_trigger": true,
+          "admissible": true,
+          "T_rep_post": 0.34000000022078736
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": true,
+          "T_rep_pre": 0.34000000078852627,
+          "trust_drop": 5.677389114389086e-10,
+          "abnormal_drop_trigger": false,
+          "report_trigger": true,
+          "admissible": true,
+          "T_rep_post": 0.34000000022078736
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": 0.043311547872276035,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 37.0,
+      "service_state": "ANOMALOUS",
+      "ack_ratio": 0.1,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.34,
+      "contextual_trust": 0.34000000002207875,
+      "selected_mu": 0.2,
+      "historical_trust": 0.34000000006182046,
+      "abnormality": true,
+      "counter": 3,
+      "full_breaker": true,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": true,
+          "T_rep_pre": 0.34000000022078736,
+          "trust_drop": 1.5896689520289442e-10,
+          "abnormal_drop_trigger": false,
+          "report_trigger": true,
+          "admissible": true,
+          "T_rep_post": 0.34000000006182046
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": true,
+          "T_rep_pre": 0.34000000022078736,
+          "trust_drop": 1.5896689520289442e-10,
+          "abnormal_drop_trigger": false,
+          "report_trigger": true,
+          "admissible": true,
+          "T_rep_post": 0.34000000006182046
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": 0.04331154803124293,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 38.0,
+      "service_state": "ANOMALOUS",
+      "ack_ratio": 0.1,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.34,
+      "contextual_trust": 0.340000000006182,
+      "selected_mu": 0.2,
+      "historical_trust": 0.34000000001730973,
+      "abnormality": true,
+      "counter": 3,
+      "full_breaker": true,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": true,
+          "T_rep_pre": 0.34000000006182046,
+          "trust_drop": 4.451072843636439e-11,
+          "abnormal_drop_trigger": false,
+          "report_trigger": true,
+          "admissible": true,
+          "T_rep_post": 0.34000000001730973
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": true,
+          "T_rep_pre": 0.34000000006182046,
+          "trust_drop": 4.451072843636439e-11,
+          "abnormal_drop_trigger": false,
+          "report_trigger": true,
+          "admissible": true,
+          "T_rep_post": 0.34000000001730973
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": 0.04331154807575366,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 39.0,
+      "service_state": "ANOMALOUS",
+      "ack_ratio": 0.1,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.34,
+      "contextual_trust": 0.340000000001731,
+      "selected_mu": 0.2,
+      "historical_trust": 0.34000000000484676,
+      "abnormality": true,
+      "counter": 3,
+      "full_breaker": true,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": true,
+          "T_rep_pre": 0.34000000001730973,
+          "trust_drop": 1.2462975096383389e-11,
+          "abnormal_drop_trigger": false,
+          "report_trigger": true,
+          "admissible": true,
+          "T_rep_post": 0.34000000000484676
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": true,
+          "T_rep_pre": 0.34000000001730973,
+          "trust_drop": 1.2462975096383389e-11,
+          "abnormal_drop_trigger": false,
+          "report_trigger": true,
+          "admissible": true,
+          "T_rep_post": 0.34000000000484676
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": 0.043311548088216634,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 40.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8440000000004848,
+      "selected_mu": 0.8,
+      "historical_trust": 0.44080000000397435,
+      "abnormality": false,
+      "counter": 2,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.34000000000484676,
+          "trust_drop": -0.10079999999912759,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.34000000000484676
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.34000000000484676,
+          "trust_drop": -0.10079999999912759,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.34000000000484676
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.057488451910910954,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 41.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8540800000003975,
+      "selected_mu": 0.8,
+      "historical_trust": 0.523456000003259,
+      "abnormality": false,
+      "counter": 1,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.34000000000484676,
+          "trust_drop": -0.18345599999841222,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.34000000000484676
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.34000000000484676,
+          "trust_drop": -0.18345599999841222,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.34000000000484676
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.1401444519101956,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 42.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.862345600000326,
+      "selected_mu": 0.8,
+      "historical_trust": 0.5912339200026724,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.34000000000484676,
+          "trust_drop": -0.2512339199978256,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.34000000000484676
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.34000000000484676,
+          "trust_drop": -0.2512339199978256,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.34000000000484676
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.207922371909609,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 43.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8691233920002673,
+      "selected_mu": 0.8,
+      "historical_trust": 0.6468118144021914,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.34000000000484676,
+          "trust_drop": -0.3068118143973446,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.34000000000484676
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.34000000000484676,
+          "trust_drop": -0.3068118143973446,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.34000000000484676
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.263500266309128,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 44.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8746811814402192,
+      "selected_mu": 0.8,
+      "historical_trust": 0.6923856878097969,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.34000000000484676,
+          "trust_drop": -0.35238568780495017,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.34000000000484676
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.34000000000484676,
+          "trust_drop": -0.35238568780495017,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.34000000000484676
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.30907413971673353,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 45.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8792385687809797,
+      "selected_mu": 0.8,
+      "historical_trust": 0.7297562640040335,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.34000000000484676,
+          "trust_drop": -0.3897562639991867,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.34000000000484676
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.34000000000484676,
+          "trust_drop": -0.3897562639991867,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.34000000000484676
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.3464447159109701,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 46.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8829756264004034,
+      "selected_mu": 0.8,
+      "historical_trust": 0.7604001364833075,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.34000000000484676,
+          "trust_drop": -0.42040013647846075,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.34000000000484676
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.34000000000484676,
+          "trust_drop": -0.42040013647846075,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.34000000000484676
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.3770885883902441,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 47.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8860400136483308,
+      "selected_mu": 0.8,
+      "historical_trust": 0.7855281119163122,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.34000000000484676,
+          "trust_drop": -0.44552811191146546,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.34000000000484676
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.34000000000484676,
+          "trust_drop": -0.44552811191146546,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.34000000000484676
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.40221656382324883,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 48.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8885528111916313,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8061330517713761,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.34000000000484676,
+          "trust_drop": -0.4661330517665293,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.34000000000484676
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.34000000000484676,
+          "trust_drop": -0.4661330517665293,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.34000000000484676
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.42282150367831267,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 49.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8906133051771377,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8230291024525284,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.34000000000484676,
+          "trust_drop": -0.4830291024476816,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.34000000000484676
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.34000000000484676,
+          "trust_drop": -0.4830291024476816,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.34000000000484676
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.43971755435946497,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 50.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8923029102452529,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8368838640110733,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.34000000000484676,
+          "trust_drop": -0.4968838640062265,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.34000000000484676
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.34000000000484676,
+          "trust_drop": -0.4968838640062265,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.34000000000484676
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.4535723159180099,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 51.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8936883864011074,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8482447684890801,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.34000000000484676,
+          "trust_drop": -0.5082447684842334,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.34000000000484676
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.34000000000484676,
+          "trust_drop": -0.5082447684842334,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.34000000000484676
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.46493322039601676,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 52.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8948244768489081,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8575607101610457,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.34000000000484676,
+          "trust_drop": -0.517560710156199,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.34000000000484676
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.34000000000484676,
+          "trust_drop": -0.517560710156199,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.34000000000484676
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.47424916206798234,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 53.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8957560710161047,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8651997823320575,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.34000000000484676,
+          "trust_drop": -0.5251997823272108,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.34000000000484676
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.34000000000484676,
+          "trust_drop": -0.5251997823272108,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.34000000000484676
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.48188823423899413,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 54.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8965199782332058,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8714638215122872,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.34000000000484676,
+          "trust_drop": -0.5314638215074404,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.34000000000484676
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.34000000000484676,
+          "trust_drop": -0.5314638215074404,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.34000000000484676
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.4881522734192238,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 55.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8971463821512288,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8766003336400755,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.34000000000484676,
+          "trust_drop": -0.5366003336352287,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.34000000000484676
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.34000000000484676,
+          "trust_drop": -0.5366003336352287,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.34000000000484676
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.4932887855470121,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 56.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8976600333640076,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8808122735848619,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.34000000000484676,
+          "trust_drop": -0.5408122735800152,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.34000000000484676
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.34000000000484676,
+          "trust_drop": -0.5408122735800152,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.34000000000484676
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.4975007254917985,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 57.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8980812273584863,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8842660643395868,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.34000000000484676,
+          "trust_drop": -0.54426606433474,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.34000000000484676
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.34000000000484676,
+          "trust_drop": -0.54426606433474,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.34000000000484676
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5009545162465234,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 58.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8984266064339588,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8870981727584611,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.34000000000484676,
+          "trust_drop": -0.5470981727536144,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.34000000000484676
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.34000000000484676,
+          "trust_drop": -0.5470981727536144,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.34000000000484676
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5037866246653977,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    },
+    {
+      "scenario_id": "E4_PERSISTENT",
+      "time_s": 59.0,
+      "service_state": "NORMAL",
+      "ack_ratio": 0.9,
+      "delay_ms": 12.0,
+      "snr_db": 16.39444915467244,
+      "eta": 0.9000000000000001,
+      "delay_quality": 0.9,
+      "direct_trust": 0.9,
+      "contextual_trust": 0.8987098172758462,
+      "selected_mu": 0.8,
+      "historical_trust": 0.8894205016619382,
+      "abnormality": false,
+      "counter": 0,
+      "full_breaker": false,
+      "variant_results": [
+        {
+          "method": "Proposed Dual-Condition Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.34000000000484676,
+          "trust_drop": -0.5494205016570914,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.34000000000484676
+        },
+        {
+          "method": "History-only Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.34000000000484676,
+          "trust_drop": -0.5494205016570914,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.34000000000484676
+        },
+        {
+          "method": "No Local Breaker",
+          "effective_breaker": false,
+          "T_rep_pre": 0.3833115480930634,
+          "trust_drop": -0.5061089535688748,
+          "abnormal_drop_trigger": false,
+          "report_trigger": false,
+          "admissible": null,
+          "T_rep_post": 0.3833115480930634
+        }
+      ]
+    }
+  ]
+}
